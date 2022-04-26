@@ -15,11 +15,11 @@
   # Enables the generation of /boot/extlinux/extlinux.conf
   boot.loader.generic-extlinux-compatible.enable = true;
 
-  # networking.hostName = "nixos"; # Define your hostname.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+  networking.hostName = "nix-pad"; # Define your hostname.
+  networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Set your time zone.
-  # time.timeZone = "Europe/Amsterdam";
+  time.timeZone = "America/Los_Angeles";
 
   # The global useDHCP flag is deprecated, therefore explicitly set to false here.
   # Per-interface useDHCP will be mandatory in the future, so this generated config
@@ -33,11 +33,11 @@
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
   # Select internationalisation properties.
-  # i18n.defaultLocale = "en_US.UTF-8";
-  # console = {
-  #   font = "Lat2-Terminus16";
-  #   keyMap = "us";
-  # };
+  i18n.defaultLocale = "en_US.UTF-8";
+  console = {
+    font = "Lat2-Terminus16";
+    keyMap = "us";
+  };
 
   # Enable the X11 windowing system.
   # services.xserver.enable = true;
@@ -60,18 +60,59 @@
   # services.xserver.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  # users.users.jane = {
-  #   isNormalUser = true;
-  #   extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
-  # };
+  users.users.me = {
+    isNormalUser = true;
+    extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
+  };
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  # environment.systemPackages = with pkgs; [
-  #   vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-  #   wget
-  #   firefox
-  # ];
+  # System Packages
+  environment.systemPackages = with pkgs; [
+    # Version control / archiving
+    git # gitAndTools.hub mercurial bazaar subversion unzip zip unrar p7zip dtrx
+
+    # Debugging / monitoring / analyzing
+    htop # ipmitool iotop powertop ltrace strace linuxPackages.perf pciutils lshw smartmontools usbutils
+    #ncdu # ncdu -x / # crawl moded dirs
+    #nix-tree # Interactively browse dependency graphs of Nix derivations.
+    
+    # Virtualization
+    #virt-manager
+
+    # Networking
+    # inetutils wireshark wget nix-prefetch-scripts
+
+    # Admin / Storage / Infrastructure Tools
+    # glusterfs
+    #mergerfs
+    #gptfdisk
+    #xfsprogs
+    #gparted
+    #parted
+    #tmux
+    #cryptsetup
+
+    # Linux shell utils
+    # pmutils psmisc which file binutils bc utillinuxCurses exfat dosfstools patchutils moreutils
+
+    # Command line programs
+    #fish # k2pdfopt ncmpcpp mpc_cli beets wpa_supplicant mp3gain mpv haskellPackages.themplate abcde vorbisgain dfc ripgrep aspell weechat
+
+    # Man pages
+    #nix-index man man-pages posix_man_pages stdman
+
+    # Development tools
+    # niv llvm haskellPackages.ghc
+    # cmake
+    # gnumake
+    # gcc
+
+    # GUI Apps
+    #firefox
+    #vlc
+
+  ];
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -84,7 +125,7 @@
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
+  services.openssh.enable = true;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
