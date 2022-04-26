@@ -16,7 +16,7 @@
   boot.loader.generic-extlinux-compatible.enable = true;
 
   networking.hostName = "nix-pad"; # Define your hostname.
-  networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+  #networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Set your time zone.
   time.timeZone = "America/Los_Angeles";
