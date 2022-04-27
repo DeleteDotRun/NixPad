@@ -43,6 +43,19 @@
   # Enable the X11 windowing system.
   # services.xserver.enable = true;
 
+  #services.xserver = {
+  #  enable = true;
+  #  displayManager.gdm.enable = true;
+  #  desktopManager.gnome.enable = true;
+  #};
+  #environment.gnome.excludePackages = [
+  #  pkgs.gnome.cheese pkgs.gnome-photos pkgs.gnome.gnome-music
+  #  pkgs.gnome.gnome-terminal pkgs.gnome.gedit pkgs.epiphany pkgs.evince
+  #  pkgs.gnome.gnome-characters pkgs.gnome.totem pkgs.gnome.tali
+  #  pkgs.gnome.iagno pkgs.gnome.hitori pkgs.gnome.atomix pkgs.gnome-tour
+  #];
+  #services.xrdp.defaultWindowManager = "gnome-shell";
+
   services.xserver = {
     enable = true;
     displayManager.lightdm.enable = true;
@@ -67,7 +80,7 @@
   # hardware.pulseaudio.enable = true;
 
   # Enable touchpad support (enabled default in most desktopManager).
-  # services.xserver.libinput.enable = true;
+  services.xserver.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.me = {
