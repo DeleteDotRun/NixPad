@@ -42,6 +42,15 @@
 
   # Enable the X11 windowing system.
   # services.xserver.enable = true;
+  
+  services.xserver = {
+    enable = true;
+    displayManager.lightdm.enable = true;
+    desktopManager.xfce.enable = true;
+  };
+  services.xrdp.defaultWindowManager = "xfce4-session";
+
+  services.xrdp.enable = true;
 
 
 
