@@ -26,6 +26,7 @@
   # replicates the default behaviour.
   networking.useDHCP = false;
   networking.interfaces.eth0.useDHCP = true;
+  networking.networkmanager.enable = true;
   #networking.interfaces.wlan0.useDHCP = true;
 
   # Configure network proxy if necessary
@@ -62,7 +63,7 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.me = {
     isNormalUser = true;
-    extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
+    extraGroups = [ "wheel" "networkmanager" ]; # Enable ‘sudo’ for the user.
   };
 
   # List packages installed in system profile. To search, run:
@@ -82,6 +83,7 @@
 
     # Networking
     # inetutils wireshark wget nix-prefetch-scripts
+    # nmcli # NetworkManager 
 
     # Admin / Storage / Infrastructure Tools
     # glusterfs
