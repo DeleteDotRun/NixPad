@@ -105,7 +105,7 @@
     #virt-manager
 
     kde-gtk-config
-    oxygen-gtk
+    #oxygen-gtk
 
     # Mulitouch
     #touchegg
