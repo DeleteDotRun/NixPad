@@ -43,18 +43,20 @@
   # Enable the X11 windowing system.
   # services.xserver.enable = true;
 
-  services.xserver = {
-    enable = true;
-    displayManager.gdm.enable = true;
-    desktopManager.gnome.enable = true;
-  };
-  environment.gnome.excludePackages = [
-    pkgs.gnome.cheese pkgs.gnome-photos pkgs.gnome.gnome-music
-    pkgs.gnome.gnome-terminal pkgs.gnome.gedit pkgs.epiphany pkgs.evince
-    pkgs.gnome.gnome-characters pkgs.gnome.totem pkgs.gnome.tali
-    pkgs.gnome.iagno pkgs.gnome.hitori pkgs.gnome.atomix pkgs.gnome-tour
-  ];
-  services.xrdp.defaultWindowManager = "gnome-shell";
+  services.xserver.desktopManager.plasma5.enable = true;
+
+  # services.xserver = {
+  #   enable = true;
+  #   displayManager.gdm.enable = true;
+  #   desktopManager.gnome.enable = true;
+  # };
+  # environment.gnome.excludePackages = [
+  #   pkgs.gnome.cheese pkgs.gnome-photos pkgs.gnome.gnome-music
+  #   pkgs.gnome.gnome-terminal pkgs.gnome.gedit pkgs.epiphany pkgs.evince
+  #   pkgs.gnome.gnome-characters pkgs.gnome.totem pkgs.gnome.tali
+  #   pkgs.gnome.iagno pkgs.gnome.hitori pkgs.gnome.atomix pkgs.gnome-tour
+  # ];
+  # services.xrdp.defaultWindowManager = "gnome-shell";
 
 #   services.xserver = {
 #     enable = true;
@@ -101,6 +103,9 @@
     
     # Virtualization
     #virt-manager
+
+    kde-gtk-config
+    oxygen-gtk
 
     # Mulitouch
     #touchegg
