@@ -45,11 +45,11 @@
 
   services.xserver.desktopManager.plasma5.enable = true;
 
-  # services.xserver = {
-  #   enable = true;
-  #   displayManager.gdm.enable = true;
+  services.xserver = {
+    enable = true;
+    displayManager.gdm.enable = true;
   #   desktopManager.gnome.enable = true;
-  # };
+  };
   # environment.gnome.excludePackages = [
   #   pkgs.gnome.cheese pkgs.gnome-photos pkgs.gnome.gnome-music
   #   pkgs.gnome.gnome-terminal pkgs.gnome.gedit pkgs.epiphany pkgs.evince
