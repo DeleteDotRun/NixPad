@@ -55,8 +55,8 @@
     # services.xrdp.defaultWindowManager = "xfce4-session";
     # services.xrdp.enable = true;
 
-    displayManager.gdm.enable = true;
-    # displayManager.lightdm.enable = true;
+    # displayManager.gdm.enable = true;
+    displayManager.lightdm.enable = true;
     # displayManager.sddm.enable  = true;
     # desktopManager.xfce.enable = true;
     desktopManager.plasma5.enable = true;
