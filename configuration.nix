@@ -62,7 +62,7 @@
     desktopManager.plasma5.enable = true;
     desktopManager.gnome.enable = true;
   };
-  services.xrdp.defaultWindowManager = "gnome-shell";
+  #services.xrdp.defaultWindowManager = "gnome-shell";
 
   # environment.gnome.excludePackages = [
   #   pkgs.gnome.cheese pkgs.gnome-photos pkgs.gnome.gnome-music
@@ -92,14 +92,14 @@
     git # gitAndTools.hub mercurial bazaar subversion unzip zip unrar p7zip dtrx
 
     # Debugging / monitoring / analyzing
-    htop # ipmitool iotop powertop ltrace strace linuxPackages.perf pciutils lshw smartmontools usbutils
+    #htop # ipmitool iotop powertop ltrace strace linuxPackages.perf pciutils lshw smartmontools usbutils
     #ncdu # ncdu -x / # crawl moded dirs
     #nix-tree # Interactively browse dependency graphs of Nix derivations.
     
     # Virtualization
     #virt-manager
 
-    kde-gtk-config
+    #kde-gtk-config
     #oxygen-gtk 
 
     # Mulitouch
@@ -151,7 +151,7 @@
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
-  services.openssh.enable = true;
+  # services.openssh.enable = true;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
