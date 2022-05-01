@@ -16,24 +16,16 @@
   # Enables the generation of /boot/extlinux/extlinux.conf
   boot.loader.generic-extlinux-compatible.enable = true;
 
-  networking.hostName = "nixipad"; # Define your hostname.
-  #networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+  networking.hostName = "nix-pad"; # Define your hostname.
+  networking.networkmanager.enable = true;
+  networking.useDHCP = false;
+  networking.interfaces.eth0.useDHCP = true;
+  # networking.interfaces.wlan0.useDHCP = true;
+  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Set your time zone.
   time.timeZone = "America/Los_Angeles";
-
-  # The global useDHCP flag is deprecated, therefore explicitly set to false here.
-  # Per-interface useDHCP will be mandatory in the future, so this generated config
-  # replicates the default behaviour.
-  networking.useDHCP = false;
-  networking.interfaces.eth0.useDHCP = true;
-  networking.interfaces.wlan0.useDHCP = true;
-  networking.networkmanager.enable = true;
-
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-
+  
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
   console = {
@@ -43,7 +35,7 @@
 
   # Enable the X11 windowing system.
   services.xserver = {
-    enable = true;
+    # enable = true;
 
     # Enable touchpad support (enabled default in most desktopManager).
     # libinput.enable = true;
@@ -55,11 +47,12 @@
     # services.xrdp.defaultWindowManager = "xfce4-session";
     # services.xrdp.enable = true;
 
+    displayManager.sddm.enable  = true;
     # displayManager.gdm.enable = true;
     # displayManager.lightdm.enable = true;
-    displayManager.sddm.enable  = true;
-    # desktopManager.xfce.enable = true;
+
     desktopManager.plasma5.enable = true;
+    # desktopManager.xfce.enable = true;
     # desktopManager.gnome.enable = true;
   };
   #services.xrdp.defaultWindowManager = "gnome-shell";
