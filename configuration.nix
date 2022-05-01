@@ -15,10 +15,10 @@
 
   # Enables the generation of /boot/extlinux/extlinux.conf
   boot.loader.generic-extlinux-compatible.enable = true;
+  boot.kernelPackages = pkgs.linuxPackages_latest;
 
   networking.hostName = "nix-pad"; # Define your hostname.
   networking.networkmanager.enable = true;
-  networking.useDHCP = false;
   networking.interfaces.eth0.useDHCP = true;
   networking.interfaces.wlan0.useDHCP = true;
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
