@@ -115,6 +115,7 @@
     # touchegg
     # onboard - not working correctly
     # CuboCore.corekeyboard - crashes
+    squeekboard
 
     ## Networking ##
     # inetutils
