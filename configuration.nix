@@ -113,6 +113,7 @@
 
     ## Mulitouch ##
     # touchegg
+    onboard
 
     ## Networking ##
     # inetutils
