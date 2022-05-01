@@ -113,9 +113,8 @@
 
     ## Mulitouch ##
     # touchegg
-    # onboard
-    # nixos.CuboCore.corekeyboard
-    CuboCore.corekeyboard
+    # onboard - not working correctly
+    # CuboCore.corekeyboard - crashes
 
     ## Networking ##
     # inetutils
