@@ -115,7 +115,8 @@
     # touchegg
     # onboard - not working correctly
     # CuboCore.corekeyboard - crashes
-    squeekboard
+    # squeekboard - gnome/wayland
+    svkbd
 
     ## Networking ##
     # inetutils
