@@ -113,7 +113,9 @@
 
     ## Mulitouch ##
     # touchegg
-    onboard
+    # onboard
+    # nixos.CuboCore.corekeyboard
+    corekeyboard
 
     ## Networking ##
     # inetutils
