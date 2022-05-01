@@ -20,7 +20,7 @@
   networking.networkmanager.enable = true;
   networking.useDHCP = false;
   networking.interfaces.eth0.useDHCP = true;
-  # networking.interfaces.wlan0.useDHCP = true;
+  networking.interfaces.wlan0.useDHCP = true;
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Set your time zone.
