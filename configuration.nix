@@ -106,9 +106,9 @@
 
     ## Mulitouch ##
     # touchegg
-    # onboard - not working correctly
-    CuboCore.corekeyboard - crashes
-    # squeekboard - gnome/wayland
+    # onboard # - not working correctly
+    CuboCore.corekeyboard # - crashes
+    # squeekboard # - gnome/wayland
     # svkbd
 
     ## Networking ##
