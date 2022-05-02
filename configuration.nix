@@ -55,9 +55,9 @@
     # displayManager.gdm.enable = true;
     # displayManager.lightdm.enable = true;
 
-    desktopManager.plasma5.enable = true;
+    # desktopManager.plasma5.enable = true;
+    desktopManager.gnome.enable = true;
     # desktopManager.xfce.enable = true;
-    # desktopManager.gnome.enable = true;
   };
   #services.xrdp.defaultWindowManager = "gnome-shell";
 
@@ -116,7 +116,7 @@
     # onboard - not working correctly
     # CuboCore.corekeyboard - crashes
     # squeekboard - gnome/wayland
-    svkbd
+    # svkbd
 
     ## Networking ##
     # inetutils
