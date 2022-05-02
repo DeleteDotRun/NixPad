@@ -49,6 +49,7 @@
     # xkbOptions = "eurosign:e";
 
     # services.xrdp.defaultWindowManager = "xfce4-session";
+    # services.xrdp.defaultWindowManager = "gnome-shell";
     # services.xrdp.enable = true;
 
     displayManager.sddm.enable  = true;
@@ -59,14 +60,6 @@
     desktopManager.gnome.enable = true;
     # desktopManager.xfce.enable = true;
   };
-  #services.xrdp.defaultWindowManager = "gnome-shell";
-
-  # environment.gnome.excludePackages = [
-  #   pkgs.gnome.cheese pkgs.gnome-photos pkgs.gnome.gnome-music
-  #   pkgs.gnome.gnome-terminal pkgs.gnome.gedit pkgs.epiphany pkgs.evince
-  #   pkgs.gnome.gnome-characters pkgs.gnome.totem pkgs.gnome.tali
-  #   pkgs.gnome.iagno pkgs.gnome.hitori pkgs.gnome.atomix pkgs.gnome-tour
-  # ];
   
   # Enable CUPS to print documents.
   # services.printing.enable = true;
@@ -114,7 +107,7 @@
     ## Mulitouch ##
     # touchegg
     # onboard - not working correctly
-    # CuboCore.corekeyboard - crashes
+    CuboCore.corekeyboard - crashes
     # squeekboard - gnome/wayland
     # svkbd
 
