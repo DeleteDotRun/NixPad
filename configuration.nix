@@ -53,8 +53,8 @@
     # services.xrdp.enable = true;
 
     # displayManager.sddm.enable  = true;
-    # displayManager.gdm.enable = true;
-    displayManager.lightdm.enable = true;
+    displayManager.gdm.enable = true;
+    # displayManager.lightdm.enable = true;
 
     # desktopManager.plasma5.enable = true;
     desktopManager.gnome.enable = true;
@@ -106,12 +106,13 @@
 
     ## Mulitouch ##
     # touchegg
-    onboard # - not working correctly
+    # onboard # - not working correctly
     # CuboCore.corekeyboard # - crashes
     # squeekboard # - gnome/wayland
     # svkbd
 
     ## Networking ##
+    chromium
     # inetutils
     # wireshark
     # wget
