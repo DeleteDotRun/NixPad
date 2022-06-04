@@ -54,8 +54,8 @@
     # services.xrdp.defaultWindowManager = "gnome-shell";
     # services.xrdp.enable = true;
 
-    displayManager.sddm.enable = true;
-    # displayManager.gdm.enable = true;
+    # displayManager.sddm.enable = true;
+    displayManager.gdm.enable = true;
     # displayManager.lightdm.enable = true;
 
     # desktopManager.plasma5.enable = true;
