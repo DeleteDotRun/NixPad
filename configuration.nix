@@ -115,7 +115,7 @@
     ## Mulitouch ##
     # touchegg
     # florence
-    # onboard # - not working correctly
+    onboard # - not working correctly
     # CuboCore.corekeyboard # - crashes
     # squeekboard # - gnome/wayland
     # svkbd
