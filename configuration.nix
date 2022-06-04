@@ -36,7 +36,7 @@
     keyMap = "us";
   };
   ## Wayland ##
-  programs.sway.enable = true;
+  # programs.sway.enable = true;
 
   ## Enable the X11 windowing system ##
   services.xserver = {
@@ -112,7 +112,7 @@
     # virt-manager
 
     # kde-gtk-config
-    # oxygen-gtk 
+    oxygen-gtk
 
     ## Mulitouch ##
     # touchegg
@@ -185,7 +185,6 @@
     ## GUI Apps ##
     # firefox
     # vlc
-
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
