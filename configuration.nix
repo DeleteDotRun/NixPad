@@ -52,13 +52,21 @@
     # services.xrdp.defaultWindowManager = "gnome-shell";
     # services.xrdp.enable = true;
 
-    # displayManager.sddm.enable  = true;
+    # displayManager.sddm.enable = true;
     displayManager.gdm.enable = true;
     # displayManager.lightdm.enable = true;
 
     # desktopManager.plasma5.enable = true;
-    desktopManager.gnome.enable = true;
+    # desktopManager.gnome.enable = true;
     # desktopManager.xfce.enable = true;
+    desktopManager.mate.enable = true;
+
+    # windowManager.xmonad.enable = true;
+    # windowManager.twm.enable = true;
+    # windowManager.icewm.enable = true;
+    # windowManager.i3.enable = true;
+    # windowManager.herbstluftwm.enable = true;
+
   };
   
   # Enable CUPS to print documents.
@@ -106,8 +114,8 @@
 
     ## Mulitouch ##
     # touchegg
-    florence
-    #onboard # - not working correctly
+    # florence
+    # onboard # - not working correctly
     # CuboCore.corekeyboard # - crashes
     # squeekboard # - gnome/wayland
     # svkbd
