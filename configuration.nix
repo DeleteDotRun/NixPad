@@ -39,8 +39,8 @@
   programs.sway.enable = true;
 
   ## Enable the X11 windowing system ##
-  # services.xserver = {
-    # enable = true;
+  services.xserver = {
+    enable = true;
     # enable = false;
 
     # Enable touchpad support (enabled default in most desktopManager).
@@ -55,11 +55,11 @@
     # services.xrdp.enable = true;
 
     # displayManager.sddm.enable = true;
-    # displayManager.gdm.enable = true;
+    displayManager.gdm.enable = true;
     # displayManager.lightdm.enable = true;
 
     # desktopManager.plasma5.enable = true;
-    # desktopManager.gnome.enable = true;
+    desktopManager.gnome.enable = true;
     # desktopManager.xfce.enable = true;
     # desktopManager.mate.enable = true;
 
@@ -69,7 +69,7 @@
     # windowManager.i3.enable = true;
     # windowManager.herbstluftwm.enable = true;
 
-  # };
+  };
   
   # Enable CUPS to print documents.
   # services.printing.enable = true;
